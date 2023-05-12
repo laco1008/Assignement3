@@ -20,9 +20,8 @@ best <- function(state, outcome) {
         suppressWarnings(sol_dat[,2] <- as.numeric(sol_dat[,2]))
         
         solution_base <- subset(sol_dat, sol_dat[,2] == min(sol_dat[,2], na.rm = TRUE), select = 1)
-        solution_abc <- solution_base[order(solution_base[,1]),]
-        solution_abc
-        ## rate
+        solution <- head(solution_base[order(solution_base[,1]),],1)
+        print(solution)
 }
 
 
